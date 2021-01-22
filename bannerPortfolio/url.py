@@ -8,4 +8,5 @@ router.register('conference', ConferenceViewSet, basename='conference')
 
 urlpatterns = [
        path('',include(router.urls)),
+       
 ]

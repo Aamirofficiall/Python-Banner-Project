@@ -14,6 +14,7 @@ class Conference(models.Model):
     country = models.CharField(max_length=100)
     description = RichTextField(default='') 
     registration = RichTextField(default='') 
+    travel_info = RichTextField(default='') 
     image = models.ImageField(upload_to ='bannerImages/') 
 
 
