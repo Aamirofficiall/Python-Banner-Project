@@ -22,7 +22,7 @@ class BannerViewSet(viewsets.ModelViewSet):
 class HotelViewSet(viewsets.ModelViewSet):
     queryset = Hotel.objects.all()
     serializer_class = HotelSerializer
-    http_method_names = ['get', 'list', ]
+    http_method_names = ['get', 'list','delete' ]
 
 
 # Create View for hotel
@@ -51,7 +51,7 @@ class HotelCreateViewAPI(APIView):
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
-    http_method_names = ['get', 'list']
+    http_method_names = ['get', 'list','delete']
 
 
 # Create View for hotel

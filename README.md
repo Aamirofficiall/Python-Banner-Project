@@ -57,3 +57,7 @@ Follow these procedures
   2. `pip manage.py makemigrations`
   3. `pip manage.py migrate`
   4. To Run on LOCALHOST `pip manage.py runserver`
+
+## Tutorial
+
+https://www.loom.com/share/673820bacaab4bb391c4ccc49fe7840b
