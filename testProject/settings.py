@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     # third party packages
 
     'rest_framework',
+    'ckeditor',
 
     # project apps
 
@@ -67,7 +68,7 @@ ROOT_URLCONF = 'testProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -82,6 +83,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'testProject.wsgi.application'
 
+
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases

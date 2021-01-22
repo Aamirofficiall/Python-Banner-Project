@@ -1,41 +1,31 @@
 from django.db import models
-
-class Banner(models.Model):
-    banner_title = models.CharField(max_length=100)
-    banner_dateOfEvent = models.DateField(max_length=100)
-    banner_address = models.TextField()
-    banner_image = models.ImageField(upload_to ='bannerImages/') 
-
-    # tab 1 fields
-    tab1_title = models.CharField(max_length=100)
-    tab1_description = models.TextField()    
+from ckeditor.fields import RichTextField
+import datetime
 
 
-    # tab 2 fields Note:Category will be added here
-    tab2_title = models.CharField(max_length=100)
-    tab2_description = models.TextField()    
+class Conference(models.Model):
+    title = models.CharField(max_length=100)
+    detail_title = models.CharField(max_length=100)
+    conference_date = models.DateField(  default=datetime.date.today, blank=True)
+    address = models.CharField(max_length=255)
+    venue = models.CharField(max_length=200)
+    is_featured = models.BooleanField(default=False)
+    city = models.CharField(max_length=100)
+    country = models.CharField(max_length=100)
+    description = RichTextField(default='') 
+    registration = RichTextField(default='') 
+    image = models.ImageField(upload_to ='bannerImages/') 
 
-    # tab 2 fields Note:Category will be added here
-    tab3_title = models.CharField(max_length=100)
-    tab3_description = models.TextField()    
-    tab3_venue = models.CharField(max_length=100)
-    tab3_address = models.TextField()
 
     def __str__(self):
-        return self.banner_title
+        return self.title
 
-
-
-class Category(models.Model):
-   category_title = models.CharField(max_length=100)
-   register_price = models.IntegerField()
-   register_late_price = models.IntegerField()
-   banner = models.ForeignKey('Banner', on_delete=models.CASCADE,related_name="Categorybanner")
 
 
 class Hotel(models.Model):
     title = models.CharField(max_length=100)
     image = models.ImageField(upload_to ='Hotel/') 
-    banner = models.ForeignKey('Banner', on_delete=models.CASCADE,related_name="Hotelbanner")
+    redirect_url = models.URLField(max_length = 200) 
+    conference = models.ForeignKey('Conference', on_delete=models.CASCADE,related_name="conferenceHotel")
 
 
