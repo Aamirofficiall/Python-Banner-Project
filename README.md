@@ -50,4 +50,4 @@ Follow these procedures
 
 ## Tutorial
 
-https://www.loom.com/share/673820bacaab4bb391c4ccc49fe7840b
+https://www.loom.com/share/d53d04e0446347b79a53e18a7821b92d
