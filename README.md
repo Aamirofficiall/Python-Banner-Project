@@ -31,7 +31,7 @@ This model present the data  necessary for registration which is shown in a tabu
   3. register_late_price
   4. banner( foreign key of Banner model)
 
-### Category:
+### Hotel:
 This model present the Hotel information that represnts slider in the design.
   1. title
   2. image
