@@ -17,11 +17,12 @@ from django.conf.urls.static import static
 from django.urls import path,include
 from django.conf import settings
 from django.contrib import admin
-from bannerPortfolio.views import logout
+from bannerPortfolio.views import logout,home
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('v1/api/', include('bannerPortfolio.url')),
     path('logout/', logout, name='logout'),
+    path('',home,name='home'),
 
 ]
 

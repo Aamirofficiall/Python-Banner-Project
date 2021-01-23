@@ -22,3 +22,7 @@ class ConferenceViewSet(viewsets.ModelViewSet):
 def logout(request):
     auth_logout(request)
     return render(request,'logout.html')
+
+
+def home(request):
+    return render(request,'home.html')
